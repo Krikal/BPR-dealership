@@ -1,6 +1,6 @@
 # BPR-dealership
 Szoftverfejlesztés projekt feladat
 
-Balyi Viktor - 
+Balyi Viktor - XJN7PV
 Polyák Tibor - 
 Rigó György János - TR795Z
