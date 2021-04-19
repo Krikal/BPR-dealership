@@ -2,5 +2,5 @@
 Szoftverfejlesztés projekt feladat
 
 Balyi Viktor - XJN7PV
-Polyák Tibor - 
+Polyák Tibor - DADSD3
 Rigó György János - TR795Z
