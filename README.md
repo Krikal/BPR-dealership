@@ -1,4 +1,4 @@
-# BPR-dealership
+# BPR Dealership
 Szoftverfejlesztés projekt feladat
 
 Balyi Viktor - XJN7PV
