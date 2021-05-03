@@ -71,10 +71,10 @@ public class bprController implements Initializable {
     private ArrayList<String> getData() throws Exception{
         DatabaseConn dbconn = new DatabaseConn();
         Connection connection = dbconn.getConnection();
-        ArrayList<String> places = new ArrayList<String>();
+        ArrayList<String> places = new ArrayList<>();
         try {
             Statement statement = connection.createStatement();
-            ResultSet qResult = statement.executeQuery("SELECT * FROM bpr.car");
+            ResultSet qResult = statement.executeQuery("SELECT DISTINCT placeOfParked FROM car");
 
             while (qResult.next()){
                 //System.out.printf(qResult.getString(2));

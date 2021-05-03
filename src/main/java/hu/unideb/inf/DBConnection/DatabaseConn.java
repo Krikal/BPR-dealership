@@ -17,7 +17,6 @@ public class DatabaseConn {
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            //conn = (java.sql.Connection) DriverManager.getConnection("jdbc.mysql://localhost:3306/adatb","root","");
             databaseLink = DriverManager.getConnection(url, databaseUser, databasePassword);
             System.out.println("Sikeres kapcsolat");
 
