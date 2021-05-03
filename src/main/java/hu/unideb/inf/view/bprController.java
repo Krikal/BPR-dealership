@@ -3,7 +3,6 @@ package hu.unideb.inf.view;
 
 
 import hu.unideb.inf.DBConnection.DatabaseConn;
-import hu.unideb.inf.model.Model;
 
 
 import javafx.fxml.FXML;
@@ -23,11 +22,7 @@ import java.util.*;
 
 
 public class bprController implements Initializable {
-    private Model model;
 
-    public void setModel(Model model){
-        this.model = model;
-    }
 
 
     @FXML
@@ -56,16 +51,20 @@ public class bprController implements Initializable {
         LocalDate startDate = datePickerOfStart.getValue();
         LocalDate endDate = datePickerOfEnd.getValue();
         String pickupPlace = comboBoxOfPlaces.getValue().toString();
-
+        if (startDate.isAfter(endDate)){
+            startOfRental.setStyle("-fx-text-inner-color: red;"); // nem megy
+            System.out.printf("Helytelen időpont!");
+        }
 
 
         System.out.println(startDate + " --- " + endDate + " --- " + pickupPlace);
 
 
     }
-    public void testButton() {
+    public void confirmButton() {
         //System.out.println(model.getCar().toString());
         getDateValues();
+
 
     }
 

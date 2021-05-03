@@ -1,12 +1,8 @@
 package hu.unideb.inf;
 
-import hu.unideb.inf.DBConnection.DatabaseConn;
-import hu.unideb.inf.model.Model;
-import hu.unideb.inf.view.FXMLStudentsSceneController;
 import javafx.application.Application;
 import static javafx.application.Application.launch;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
@@ -17,7 +13,7 @@ public class MainApp extends Application {
 
         FXMLLoader loader = new FXMLLoader(MainApp.class.getResource("/fxml/bpr_dealership.fxml"));
         Scene scene = new Scene(loader.load());
-        stage.setTitle("BPR - Dealership");
+        stage.setTitle("BPR -  Dealership");
         stage.setScene(scene);
         
         //((FXMLStudentsSceneController)loader.getController()).setModel(new Model());

@@ -52,6 +52,6 @@
                 <Font size="30.0" />
             </font>
         </Label>
-        <Button alignment="CENTER" contentDisplay="CENTER" onAction="#testButton" layoutX="160.0" layoutY="475.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="435.0" style="-fx-background-color: darkkhaki;" text="Az ajánlatokért kattints ide!" textAlignment="CENTER" />
+        <Button alignment="CENTER" contentDisplay="CENTER" onAction="#confirmButton" layoutX="160.0" layoutY="475.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="435.0" style="-fx-background-color: darkkhaki;" text="Az ajánlatokért kattints ide!" textAlignment="CENTER" />
     </children>
 </Pane>
