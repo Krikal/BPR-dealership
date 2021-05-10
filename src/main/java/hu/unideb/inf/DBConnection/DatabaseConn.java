@@ -30,3 +30,7 @@ public class DatabaseConn {
         return databaseLink;
     }
 }
+/*
+* bpr -> mysql
+*
+* */

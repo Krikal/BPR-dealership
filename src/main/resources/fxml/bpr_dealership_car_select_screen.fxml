@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<SplitPane dividerPositions="0.32947976878612717" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="520.0" prefWidth="628.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.view.bprCarSelectScreenController">
+    <items>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="265.0" prefWidth="626.0" style="-fx-background-color: wheat;">
+            <children>
+                <DatePicker fx:id="startOfLeasingDatePicker" layoutX="14.0" layoutY="36.0" />
+                <DatePicker fx:id="endOfLeasingDatePicker" layoutX="226.0" layoutY="36.0" />
+                <ComboBox fx:id="locationOfParkedCars" layoutX="446.0" layoutY="36.0" prefWidth="150.0" />
+                <Label fx:id="startOfLeasingLabel" layoutX="49.0" layoutY="14.0" text="Kölcsönzés kezdete" />
+                <Label fx:id="endOfLeasingLabel" layoutX="269.0" layoutY="14.0" text="Kölcsönzés vége" />
+                <Label layoutX="487.0" layoutY="14.0" text="Átvétel helye" />
+                <CheckBox layoutX="14.0" layoutY="84.0" mnemonicParsing="false" text="Név szerint növekvő" AnchorPane.leftAnchor="14.0" />
+                <CheckBox layoutX="14.0" layoutY="123.0" mnemonicParsing="false" text="Név sszerint csökkenő" AnchorPane.leftAnchor="14.0" />
+                <CheckBox layoutX="176.0" layoutY="84.0" mnemonicParsing="false" text="Gyártási év szerint növekvő" />
+                <CheckBox layoutX="176.0" layoutY="123.0" mnemonicParsing="false" text="Gyártási év szerint csökkenő" />
+                <CheckBox layoutX="360.0" layoutY="84.0" mnemonicParsing="false" text="Ajtó szám növekvő" />
+                <CheckBox layoutX="360.0" layoutY="123.0" mnemonicParsing="false" text="Ajtó szám csökkenő" />
+                <CheckBox layoutX="499.0" layoutY="84.0" mnemonicParsing="false" text="Ár növekvő" />
+                <CheckBox layoutX="499.0" layoutY="123.0" mnemonicParsing="false" text="Ár csökkenő" />
+            </children></AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="346.0" prefWidth="614.0" style="-fx-background-color: wheat;">
+            <children>
+                <ScrollPane layoutX="-2.0" layoutY="-2.0" prefHeight="346.0" prefWidth="627.0" style="-fx-background-color: wheat;">
+                    <content>
+                        <GridPane fx:id="carsGrid" style="-fx-background-color: wheat;">
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                        </GridPane>
+                    </content>
+                </ScrollPane>
+            </children></AnchorPane>
+    </items>
+</SplitPane>

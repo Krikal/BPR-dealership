@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="147.0" prefWidth="527.0" style="-fx-background-radius: 30; -fx-background-color: papayawhip;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.view.bprCarSelectItemController">
+    <children>
+        <VBox prefHeight="135.0" prefWidth="242.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="268.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <HBox prefHeight="0.0" prefWidth="212.0">
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                </HBox>
+                <ImageView id="thumbnail" fitHeight="125.0" fitWidth="203.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="https://akm-img-a-in.tosshub.com/sites/btmt/images/stories/lamborghini_660_140220101539.jpg" />
+                    </image>
+                    <VBox.margin>
+                        <Insets bottom="5.0" left="20.0" right="5.0" top="20.0" />
+                    </VBox.margin>
+                </ImageView>
+            </children>
+        </VBox>
+        <Label fx:id="brand" alignment="CENTER" contentDisplay="CENTER" layoutX="244.0" layoutY="19.0" prefHeight="20.0" prefWidth="115.0" style="-fx-background-color: burlywood; -fx-background-radius: 10;" text="marka" textAlignment="CENTER" />
+        <Label fx:id="model" alignment="CENTER" contentDisplay="CENTER" layoutX="374.0" layoutY="19.0" prefHeight="20.0" prefWidth="115.0" style="-fx-background-color: tan; -fx-background-radius: 10;" text="model" textAlignment="CENTER" />
+        <Label fx:id="yearOfManufacture" alignment="CENTER" contentDisplay="CENTER" layoutX="244.0" layoutY="39.0" prefHeight="20.0" prefWidth="115.0" style="-fx-background-color: tan; -fx-background-radius: 10;" text="gyartasi_ev" textAlignment="CENTER" />
+        <Label fx:id="countOfPeople"  alignment="CENTER" contentDisplay="CENTER" layoutX="244.0" layoutY="59.0" prefHeight="20.0" prefWidth="115.0" style="-fx-background-color: burlywood; -fx-background-radius: 10;" text="hany_szemelyes" textAlignment="CENTER" />
+        <Label fx:id="shitfGear" alignment="CENTER" contentDisplay="CENTER" layoutX="244.0" layoutY="80.0" prefHeight="20.0" prefWidth="115.0" style="-fx-background-color: tan; -fx-background-radius: 10;" text="valto" textAlignment="CENTER" AnchorPane.leftAnchor="244.0" />
+        <Label fx:id="fuel" alignment="CENTER" contentDisplay="CENTER" layoutX="374.0" layoutY="39.0" prefHeight="20.0" prefWidth="115.0" style="-fx-background-color: burlywood; -fx-background-radius: 10;" text="uzemanyag" textAlignment="CENTER" />
+        <Label fx:id="countOfDoors"  alignment="CENTER" contentDisplay="CENTER" layoutX="374.0" layoutY="59.0" prefHeight="20.0" prefWidth="115.0" style="-fx-background-color: tan; -fx-background-radius: 10;" text="hany_ajtos" textAlignment="CENTER" />
+        <Label fx:id="airCondition" alignment="CENTER" contentDisplay="CENTER" layoutX="374.0" layoutY="80.0" prefHeight="20.0" prefWidth="115.0" style="-fx-background-color: burlywood; -fx-background-radius: 10;" text="legkondi" textAlignment="CENTER" />
+        <Label fx:id="price" alignment="CENTER" contentDisplay="CENTER" layoutX="266.0" layoutY="107.0" prefHeight="28.0" prefWidth="199.0" style="-fx-background-color: maroon; -fx-background-radius: 10;" text="ar" textAlignment="CENTER" textFill="WHITE" />
+    </children>
+</AnchorPane>

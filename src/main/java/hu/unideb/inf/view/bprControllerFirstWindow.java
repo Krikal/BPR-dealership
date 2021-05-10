@@ -5,12 +5,17 @@ package hu.unideb.inf.view;
 import hu.unideb.inf.DBConnection.DatabaseConn;
 
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
-
+import javafx.stage.Stage;
 
 
 import java.net.URL;
@@ -21,7 +26,7 @@ import java.time.LocalDate;
 import java.util.*;
 
 
-public class bprController implements Initializable {
+public class bprControllerFirstWindow implements Initializable {
 
 
 
@@ -56,16 +61,30 @@ public class bprController implements Initializable {
             System.out.printf("Helytelen időpont!");
         }
 
-
         System.out.println(startDate + " --- " + endDate + " --- " + pickupPlace);
 
-
     }
-    public void confirmButton() {
+    public void confirmButton(ActionEvent event) {
         //System.out.println(model.getCar().toString());
         getDateValues();
 
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/bpr_dealership_car_select_screen.fxml"));
+            Parent root = loader.load();
+            bprCarSelectScreenController scene2Controller = loader.getController();
+            scene2Controller.transferData(datePickerOfStart.getValue(), datePickerOfEnd.getValue(), comboBoxOfPlaces.getItems(), comboBoxOfPlaces.getValue());
 
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.setTitle("Select window");
+            stage.show();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            e.getCause();
+
+
+        }
     }
 
     private ArrayList<String> getData() throws Exception{
