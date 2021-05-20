@@ -10,15 +10,19 @@ public class MainApp extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
+        try{
+            FXMLLoader loader = new FXMLLoader(MainApp.class.getResource("/fxml/bpr_dealership.fxml"));
+            Scene scene = new Scene(loader.load());
+            stage.setTitle("BPR -  Dealership");
+            stage.setScene(scene);
 
-        FXMLLoader loader = new FXMLLoader(MainApp.class.getResource("/fxml/bpr_dealership.fxml"));
-        Scene scene = new Scene(loader.load());
-        stage.setTitle("BPR -  Dealership");
-        stage.setScene(scene);
-        
-        //((FXMLStudentsSceneController)loader.getController()).setModel(new Model());
-        
-        stage.show();
+
+
+            stage.show();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
     }
 
     /**

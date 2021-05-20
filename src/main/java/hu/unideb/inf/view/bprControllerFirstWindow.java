@@ -5,13 +5,13 @@ package hu.unideb.inf.view;
 import hu.unideb.inf.DBConnection.DatabaseConn;
 
 
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
+
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
@@ -26,7 +26,7 @@ import java.time.LocalDate;
 import java.util.*;
 
 
-public class bprControllerFirstWindow implements Initializable {
+public class bprControllerFirstWindow  implements Initializable  {
 
 
 
@@ -52,39 +52,49 @@ public class bprControllerFirstWindow implements Initializable {
 
 
 
-    private void getDateValues(){
+    private int getDateValues(){
         LocalDate startDate = datePickerOfStart.getValue();
         LocalDate endDate = datePickerOfEnd.getValue();
         String pickupPlace = comboBoxOfPlaces.getValue().toString();
         if (startDate.isAfter(endDate)){
             startOfRental.setStyle("-fx-text-inner-color: red;"); // nem megy
             System.out.printf("Helytelen időpont!");
+            return -10;
         }
 
         System.out.println(startDate + " --- " + endDate + " --- " + pickupPlace);
+        return 1;
 
     }
-    public void confirmButton(ActionEvent event) {
+    public int confirmButton(ActionEvent event) {
         //System.out.println(model.getCar().toString());
-        getDateValues();
+        int result = getDateValues();
+
+        if (result == -10){
+            datePickerOfStart.setValue(null);
+            datePickerOfEnd.setValue(null);
+            comboBoxOfPlaces.setValue(null);
+            return -10;
+        }
 
         try {
+
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/bpr_dealership_car_select_screen.fxml"));
-            Parent root = loader.load();
+            Scene scene = new Scene(loader.load());
             bprCarSelectScreenController scene2Controller = loader.getController();
             scene2Controller.transferData(datePickerOfStart.getValue(), datePickerOfEnd.getValue(), comboBoxOfPlaces.getItems(), comboBoxOfPlaces.getValue());
 
             Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.setTitle("Select window");
+            stage.setScene(scene);
+            stage.setTitle("List of cars");
             stage.show();
 
         } catch (Exception e) {
             e.printStackTrace();
             e.getCause();
-
-
         }
+        return 1;
+
     }
 
     private ArrayList<String> getData() throws Exception{
@@ -122,6 +132,6 @@ public class bprControllerFirstWindow implements Initializable {
         }
 
 
-       //comboBoxOfPlaces.getItems().addAll("valami","gyere rám", "WOW", "csicska Geci Mindenki!");
     }
+
 }

@@ -44,14 +44,14 @@ public class bprCarSelectScreenController implements Initializable {
         Connection connection = databaseConn.getConnection();
         ArrayList<Car> cs = new ArrayList<>();
 
-
+        Car car; // üres car model
         try {
             String query = "SELECT * FROM car WHERE placeOfParked='" + locationOfParkedCars.getValue().toString() + "' AND dateOfParked < '"+ startOfLeasingDatePicker.getValue().toString() +"'";
             Statement statement = connection.createStatement();
             ResultSet qResult = statement.executeQuery(query);;
 
 
-            Car car = new Car(); // üres car model
+
 
 
 
