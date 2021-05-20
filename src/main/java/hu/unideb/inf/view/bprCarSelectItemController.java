@@ -32,11 +32,17 @@ public class bprCarSelectItemController {
         model.setText(car.getModel());
         yearOfManufacture.setText(car.getDateOfManufacture().toString());
         countOfPeople.setText(String.valueOf(car.getCountOfPerson()));
-        //shiftGear.setText(car.getGearShitf());
-        shitfGear.setText("Autómata");
+
+        shitfGear.setText(car.getGearShitf());
         fuel.setText(car.getFuel());
         countOfDoors.setText(String.valueOf(car.getCountOfDoors()));
-        airCondition.setText("Van");
+
+        if (car.getAirCondition() == 1){
+            airCondition.setText("Van");
+        }else{
+            airCondition.setText("Nincs");
+        }
+
         price.setText(String.valueOf(car.getPrice()));
     }
 

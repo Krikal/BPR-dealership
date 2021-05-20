@@ -18,6 +18,15 @@ public class Car {
     private LocalDate dateOfManufacture;
     private String gearShitf;
     private int price;
+    private int airCondition;
+
+    public int getAirCondition() {
+        return airCondition;
+    }
+
+    public void setAirCondition(int airCondition) {
+        this.airCondition = airCondition;
+    }
 
     public int getId() {
         return id;
@@ -134,7 +143,7 @@ public class Car {
     public Car(){
 
     }
-    public Car(int id, String brand, String model, String fuel, Boolean isAvailable, LocalDate dateOfPickup, LocalDate dateOfParked, String placeOfPickup, String placeOfParked, int countOfPerson, int countOfDoors, LocalDate dateOfManufacture, String gearShitf, int price) {
+    public Car(int id, String brand, String model, String fuel, Boolean isAvailable, LocalDate dateOfPickup, LocalDate dateOfParked, String placeOfPickup, String placeOfParked, int countOfPerson, int countOfDoors, LocalDate dateOfManufacture, String gearShitf, int price, int airCondition) {
         this.id = id;
         this.brand = brand;
         this.model = model;
@@ -149,5 +158,6 @@ public class Car {
         this.dateOfManufacture = dateOfManufacture;
         this.gearShitf = gearShitf;
         this.price = price;
+        this.airCondition = airCondition;
     }
 }
