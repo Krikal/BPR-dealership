@@ -1,41 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="147.0" prefWidth="527.0" style="-fx-background-radius: 30; -fx-background-color: papayawhip;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.view.bprCarSelectItemController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="183.0" prefWidth="801.0" style="-fx-background-radius: 30; -fx-background-color: papayawhip;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.view.bprCarSelectItemController">
     <children>
-        <VBox prefHeight="135.0" prefWidth="242.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="268.0" AnchorPane.topAnchor="0.0">
+        <Label fx:id="yearOfManufacture"  layoutX="423.0" layoutY="46.0" style="-fx-background-color: wheat;" text="&lt;gyartasi_ev&gt;" />
+        <VBox layoutX="25.0" layoutY="29.0" prefHeight="126.0" prefWidth="224.0" AnchorPane.bottomAnchor="28.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="552.0" AnchorPane.topAnchor="29.0">
             <children>
-                <HBox prefHeight="0.0" prefWidth="212.0">
-                    <VBox.margin>
-                        <Insets />
-                    </VBox.margin>
-                </HBox>
-                <ImageView id="thumbnail" fitHeight="125.0" fitWidth="203.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView id="thumbnail" fitHeight="125.0" fitWidth="225.0" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image url="https://akm-img-a-in.tosshub.com/sites/btmt/images/stories/lamborghini_660_140220101539.jpg" />
                     </image>
-                    <VBox.margin>
-                        <Insets bottom="5.0" left="20.0" right="5.0" top="20.0" />
-                    </VBox.margin>
                 </ImageView>
             </children>
         </VBox>
-        <Label fx:id="brand" alignment="CENTER" contentDisplay="CENTER" layoutX="244.0" layoutY="19.0" prefHeight="20.0" prefWidth="115.0" style="-fx-background-color: burlywood; -fx-background-radius: 10;" text="marka" textAlignment="CENTER" />
-        <Label fx:id="model" alignment="CENTER" contentDisplay="CENTER" layoutX="374.0" layoutY="19.0" prefHeight="20.0" prefWidth="115.0" style="-fx-background-color: tan; -fx-background-radius: 10;" text="model" textAlignment="CENTER" />
-        <Label fx:id="yearOfManufacture" alignment="CENTER" contentDisplay="CENTER" layoutX="244.0" layoutY="39.0" prefHeight="20.0" prefWidth="115.0" style="-fx-background-color: tan; -fx-background-radius: 10;" text="gyartasi_ev" textAlignment="CENTER" />
-        <Label fx:id="countOfPeople"  alignment="CENTER" contentDisplay="CENTER" layoutX="244.0" layoutY="59.0" prefHeight="20.0" prefWidth="115.0" style="-fx-background-color: burlywood; -fx-background-radius: 10;" text="hany_szemelyes" textAlignment="CENTER" />
-        <Label fx:id="shitfGear" alignment="CENTER" contentDisplay="CENTER" layoutX="244.0" layoutY="80.0" prefHeight="20.0" prefWidth="115.0" style="-fx-background-color: tan; -fx-background-radius: 10;" text="valto" textAlignment="CENTER" AnchorPane.leftAnchor="244.0" />
-        <Label fx:id="fuel" alignment="CENTER" contentDisplay="CENTER" layoutX="374.0" layoutY="39.0" prefHeight="20.0" prefWidth="115.0" style="-fx-background-color: burlywood; -fx-background-radius: 10;" text="uzemanyag" textAlignment="CENTER" />
-        <Label fx:id="countOfDoors"  alignment="CENTER" contentDisplay="CENTER" layoutX="374.0" layoutY="59.0" prefHeight="20.0" prefWidth="115.0" style="-fx-background-color: tan; -fx-background-radius: 10;" text="hany_ajtos" textAlignment="CENTER" />
-        <Label fx:id="airCondition" alignment="CENTER" contentDisplay="CENTER" layoutX="374.0" layoutY="80.0" prefHeight="20.0" prefWidth="115.0" style="-fx-background-color: burlywood; -fx-background-radius: 10;" text="legkondi" textAlignment="CENTER" />
-        <Label fx:id="price" alignment="CENTER" contentDisplay="CENTER" layoutX="266.0" layoutY="107.0" prefHeight="28.0" prefWidth="199.0" style="-fx-background-color: maroon; -fx-background-radius: 10;" text="ar" textAlignment="CENTER" textFill="WHITE" />
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="287.0" layoutY="17.0" prefHeight="20.0" prefWidth="115.0" style="-fx-background-color: burlywood; -fx-background-radius: 10;" text="Márka" textAlignment="CENTER" />
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="522.0" layoutY="17.0" prefHeight="20.0" prefWidth="115.0" style="-fx-background-color: tan; -fx-background-radius: 10;" text="Model" textAlignment="CENTER" />
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="287.0" layoutY="45.0" prefHeight="20.0" prefWidth="115.0" style="-fx-background-color: tan; -fx-background-radius: 10;" text="Gyártási év" textAlignment="CENTER" />
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="287.0" layoutY="76.0" prefHeight="20.0" prefWidth="115.0" style="-fx-background-color: burlywood; -fx-background-radius: 10;" text="Férőhely" textAlignment="CENTER" />
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="287.0" layoutY="108.0" prefHeight="20.0" prefWidth="115.0" style="-fx-background-color: tan; -fx-background-radius: 10;" text="Váltó" textAlignment="CENTER" AnchorPane.leftAnchor="287.0" />
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="522.0" layoutY="45.0" prefHeight="20.0" prefWidth="115.0" style="-fx-background-color: burlywood; -fx-background-radius: 10;" text="Üzemanyag" textAlignment="CENTER" />
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="522.0" layoutY="76.0" prefHeight="20.0" prefWidth="115.0" style="-fx-background-color: tan; -fx-background-radius: 10;" text="Ajtók száma" textAlignment="CENTER" />
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="522.0" layoutY="108.0" prefHeight="20.0" prefWidth="115.0" style="-fx-background-color: burlywood; -fx-background-radius: 10;" text="Légkondi" textAlignment="CENTER" />
+        <Label fx:id="price"  alignment="CENTER" contentDisplay="CENTER" layoutX="287.0" layoutY="142.0" prefHeight="30.0" prefWidth="224.0" style="-fx-background-color: maroon; -fx-background-radius: 10;" text="&lt;ar&gt;" textAlignment="CENTER" textFill="WHITE" />
+        <Label fx:id="brand" layoutX="423.0" layoutY="18.0" style="-fx-background-color: wheat;" text="&lt;marka&gt;" />
+        <Label fx:id="countOfPeople" layoutX="423.0" layoutY="77.0" style="-fx-background-color: wheat;" text="&lt;fero_hely&gt;" />
+        <Label fx:id="shitfGear" layoutX="426.0" layoutY="109.0" style="-fx-background-color: wheat;" text="&lt;valto&gt;" />
+        <Label fx:id="model" layoutX="648.0" layoutY="18.0" style="-fx-background-color: wheat;" text="&lt;model&gt;" />
+        <Label fx:id="fuel" layoutX="649.0" layoutY="46.0" style="-fx-background-color: wheat;" text="&lt;uzemanyag&gt;" />
+        <Label fx:id="countOfDoors" layoutX="648.0" layoutY="77.0" style="-fx-background-color: wheat;" text="&lt;ajtok_szama&gt;" />
+        <Label fx:id="airCondition" layoutX="649.0" layoutY="109.0" style="-fx-background-color: wheat;" text="&lt;legkondi&gt;" />
+        <Button layoutX="525.0" layoutY="142.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="224.0" text="Kiválasztom" />
     </children>
 </AnchorPane>
