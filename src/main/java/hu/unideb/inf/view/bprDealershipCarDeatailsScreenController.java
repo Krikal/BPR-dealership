@@ -7,11 +7,11 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
+
 
 
 
@@ -48,6 +48,35 @@ public class bprDealershipCarDeatailsScreenController  implements Initializable 
     @FXML
     private Label bill;
 
+    @FXML
+    private CheckBox CascoBox;
+
+    @FXML
+    private CheckBox TeleTankBox;
+
+    @FXML
+    private CheckBox BalesetBox;
+
+    @FXML
+    private CheckBox TetoBox;
+
+    @FXML
+    private Label CascoLabel;
+    @FXML
+    private Label TeleTankLabel;
+    @FXML
+    private Label BalesetLabel;
+    @FXML
+    private Label TetoLabel;
+
+    @FXML
+    private  CheckBox EURBox;
+
+    @FXML
+    private  CheckBox HUFBox;
+
+    @FXML
+    private  CheckBox USDBox;
 
     private int id;
 
@@ -123,6 +152,7 @@ public class bprDealershipCarDeatailsScreenController  implements Initializable 
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        HUFBox.setSelected(true);
 
     }
 
@@ -130,5 +160,44 @@ public class bprDealershipCarDeatailsScreenController  implements Initializable 
     public void foglalas(ActionEvent actionEvent) {
 
         System.out.println(name.getText() + " " + email.getText() + " " + mobileNumber.getText() + " " + address.getText() + " " + birthDayPicker.getValue().toString());
+    }
+
+    public void extraUpdate(ActionEvent actionEvent) {
+        int price = Integer.parseInt( bill.getText() );
+
+        ToggleGroup toggleGroup = new ToggleGroup();
+
+
+
+        if (CascoBox.isSelected()){
+            CascoBox.setSelected(false);
+            CascoBox.setDisable(true);
+            price += Integer.parseInt(CascoLabel.getText());
+        }
+        if (TeleTankBox.isSelected()){
+            price += Integer.parseInt(TeleTankLabel.getText());
+            TeleTankBox.setSelected(false);
+            TeleTankBox.setDisable(true);
+
+        }
+        if (BalesetBox.isSelected()){
+            price += Integer.parseInt(BalesetLabel.getText());
+            BalesetBox.setSelected(false);
+            BalesetBox.setDisable(true);
+
+        }
+        if (TetoBox.isSelected()){
+            price += Integer.parseInt(TetoLabel.getText());
+            TetoBox.setSelected(false);
+            TetoBox.setDisable(true);
+
+
+        }
+
+        bill.setText(String.valueOf(price));
+
+
+
+
     }
 }
