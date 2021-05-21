@@ -14,7 +14,8 @@
             <children>
                 <ImageView id="thumbnail" fitHeight="125.0" fitWidth="225.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="https://akm-img-a-in.tosshub.com/sites/btmt/images/stories/lamborghini_660_140220101539.jpg" />
+                        <!--<Image url="https://akm-img-a-in.tosshub.com/sites/btmt/images/stories/lamborghini_660_140220101539.jpg" /> -->
+                        <Image url="https://www.freelogoservices.com/api/main/images/1j+ojFVDOMkX9Wytexe43D6khvSDqR9ImBrNwXs1M3EMoAJtliIsg...po9vg" />
                     </image>
                 </ImageView>
             </children>
@@ -35,6 +36,6 @@
         <Label fx:id="fuel" layoutX="649.0" layoutY="46.0" style="-fx-background-color: wheat;" text="&lt;uzemanyag&gt;" />
         <Label fx:id="countOfDoors" layoutX="648.0" layoutY="77.0" style="-fx-background-color: wheat;" text="&lt;ajtok_szama&gt;" />
         <Label fx:id="airCondition" layoutX="649.0" layoutY="109.0" style="-fx-background-color: wheat;" text="&lt;legkondi&gt;" />
-        <Button layoutX="525.0" layoutY="142.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="224.0" text="Kiválasztom" />
+        <Button fx:id="carId" layoutX="525.0" layoutY="142.0" onMouseClicked="#setData"  onAction="#learnMore" prefHeight="30.0" prefWidth="224.0" text="Kiválasztom" />
     </children>
 </AnchorPane>

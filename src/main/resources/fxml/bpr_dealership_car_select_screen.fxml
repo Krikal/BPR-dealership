@@ -51,6 +51,7 @@
                         </GridPane>
                     </content>
                 </ScrollPane>
-            </children></AnchorPane>
+            </children>
+        </AnchorPane>
     </items>
 </SplitPane>
