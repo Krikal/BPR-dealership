@@ -2,13 +2,18 @@ package hu.unideb.inf.view;
 
 import hu.unideb.inf.DBConnection.DatabaseConn;
 import hu.unideb.inf.model.Car;
-import javafx.application.Application;
+
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
-import javafx.stage.Stage;
+
+
 
 import java.io.IOException;
 import java.net.URL;
@@ -16,7 +21,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.time.LocalDate;
-import java.util.ArrayList;
+
 import java.util.ResourceBundle;
 
 public class bprDealershipCarDeatailsScreenController  implements Initializable {
@@ -24,6 +29,25 @@ public class bprDealershipCarDeatailsScreenController  implements Initializable 
 
     @FXML
     private GridPane carGrid;
+
+    @FXML
+    private TextField name;
+
+    @FXML
+    private TextField email;
+
+    @FXML
+    private TextField mobileNumber;
+
+    @FXML
+    private TextField address;
+
+    @FXML
+    private DatePicker birthDayPicker;
+
+    @FXML
+    private Label bill;
+
 
     private int id;
 
@@ -39,8 +63,8 @@ public class bprDealershipCarDeatailsScreenController  implements Initializable 
     public void mysqlCall(){
         DatabaseConn databaseConn = new DatabaseConn();
         Connection connection = databaseConn.getConnection();
-        System.out.println(id);
-        System.out.println("!!----gyereeee");
+        //System.out.println(id);
+        //System.out.println("!!----gyereeee");
 
         try {
             String query = "SELECT * FROM car WHERE id = " + id;
@@ -66,6 +90,7 @@ public class bprDealershipCarDeatailsScreenController  implements Initializable 
             car.setPrice(Integer.parseInt(qResult.getString(14)));
             car.setAirCondition(Integer.parseInt(qResult.getString(15)));
             //
+            bill.setText(String.valueOf(car.getPrice()));
             System.out.println(car);
             valami(car);
 
@@ -100,6 +125,8 @@ public class bprDealershipCarDeatailsScreenController  implements Initializable 
     }
 
 
+    public void foglalas(ActionEvent actionEvent) {
 
-
+        System.out.println(name.getText() + " " + email.getText() + " " + mobileNumber.getText() + " " + address.getText() + " " + birthDayPicker.getValue().toString());
+    }
 }
