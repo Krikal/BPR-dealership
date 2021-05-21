@@ -9,7 +9,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="183.0" prefWidth="801.0" style="-fx-background-radius: 30; -fx-background-color: papayawhip;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.view.bprCarSelectItemController">
     <children>
-        <Label fx:id="yearOfManufacture"  layoutX="423.0" layoutY="46.0" style="-fx-background-color: wheat;" text="&lt;gyartasi_ev&gt;" />
+        <Label fx:id="yearOfManufacture" layoutX="423.0" layoutY="46.0" text="&lt;gyartasi_ev&gt;" />
         <VBox layoutX="25.0" layoutY="29.0" prefHeight="126.0" prefWidth="224.0" AnchorPane.bottomAnchor="28.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="552.0" AnchorPane.topAnchor="29.0">
             <children>
                 <ImageView id="thumbnail" fitHeight="125.0" fitWidth="225.0" pickOnBounds="true" preserveRatio="true">
@@ -28,14 +28,14 @@
         <Label alignment="CENTER" contentDisplay="CENTER" layoutX="522.0" layoutY="45.0" prefHeight="20.0" prefWidth="115.0" style="-fx-background-color: burlywood; -fx-background-radius: 10;" text="Üzemanyag" textAlignment="CENTER" />
         <Label alignment="CENTER" contentDisplay="CENTER" layoutX="522.0" layoutY="76.0" prefHeight="20.0" prefWidth="115.0" style="-fx-background-color: tan; -fx-background-radius: 10;" text="Ajtók száma" textAlignment="CENTER" />
         <Label alignment="CENTER" contentDisplay="CENTER" layoutX="522.0" layoutY="108.0" prefHeight="20.0" prefWidth="115.0" style="-fx-background-color: burlywood; -fx-background-radius: 10;" text="Légkondi" textAlignment="CENTER" />
-        <Label fx:id="price"  alignment="CENTER" contentDisplay="CENTER" layoutX="287.0" layoutY="142.0" prefHeight="30.0" prefWidth="224.0" style="-fx-background-color: maroon; -fx-background-radius: 10;" text="&lt;ar&gt;" textAlignment="CENTER" textFill="WHITE" />
-        <Label fx:id="brand" layoutX="423.0" layoutY="18.0" style="-fx-background-color: wheat;" text="&lt;marka&gt;" />
-        <Label fx:id="countOfPeople" layoutX="423.0" layoutY="77.0" style="-fx-background-color: wheat;" text="&lt;fero_hely&gt;" />
-        <Label fx:id="shitfGear" layoutX="426.0" layoutY="109.0" style="-fx-background-color: wheat;" text="&lt;valto&gt;" />
-        <Label fx:id="model" layoutX="648.0" layoutY="18.0" style="-fx-background-color: wheat;" text="&lt;model&gt;" />
-        <Label fx:id="fuel" layoutX="649.0" layoutY="46.0" style="-fx-background-color: wheat;" text="&lt;uzemanyag&gt;" />
-        <Label fx:id="countOfDoors" layoutX="648.0" layoutY="77.0" style="-fx-background-color: wheat;" text="&lt;ajtok_szama&gt;" />
-        <Label fx:id="airCondition" layoutX="649.0" layoutY="109.0" style="-fx-background-color: wheat;" text="&lt;legkondi&gt;" />
-        <Button fx:id="carId" layoutX="525.0" layoutY="142.0" onMouseClicked="#setData"  onAction="#learnMore" prefHeight="30.0" prefWidth="224.0" text="Kiválasztom" />
+        <Label fx:id="price" alignment="CENTER" contentDisplay="CENTER" layoutX="287.0" layoutY="142.0" prefHeight="30.0" prefWidth="224.0" style="-fx-background-color: maroon; -fx-background-radius: 10;" text="&lt;ar&gt;" textAlignment="CENTER" textFill="WHITE" />
+        <Label fx:id="brand" layoutX="423.0" layoutY="18.0" text="&lt;marka&gt;" />
+        <Label fx:id="countOfPeople" layoutX="423.0" layoutY="77.0" text="&lt;fero_hely&gt;" />
+        <Label fx:id="shitfGear" layoutX="426.0" layoutY="109.0" text="&lt;valto&gt;" />
+        <Label fx:id="model" layoutX="648.0" layoutY="18.0" text="&lt;model&gt;" />
+        <Label fx:id="fuel" layoutX="649.0" layoutY="46.0" text="&lt;uzemanyag&gt;" />
+        <Label fx:id="countOfDoors" layoutX="648.0" layoutY="77.0" text="&lt;ajtok_szama&gt;" />
+        <Label fx:id="airCondition" layoutX="649.0" layoutY="109.0" text="&lt;legkondi&gt;" />
+        <Button fx:id="carId" layoutX="525.0" layoutY="142.0" onAction="#learnMore" onMouseClicked="#setData" prefHeight="30.0" prefWidth="224.0" text="Kiválasztom" />
     </children>
 </AnchorPane>
