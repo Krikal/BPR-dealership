@@ -54,7 +54,7 @@ public class bprDealershipCarDeatailsScreenController  implements Initializable 
     public void setId(int id) {
         this.id = id;
     }
-    private Car car = null; // üres car model
+    private Car car; // üres car model
 
     public void transferData(String id) {
         this.id = Integer.parseInt(id);
@@ -90,9 +90,10 @@ public class bprDealershipCarDeatailsScreenController  implements Initializable 
             car.setPrice(Integer.parseInt(qResult.getString(14)));
             car.setAirCondition(Integer.parseInt(qResult.getString(15)));
             //
-            bill.setText(String.valueOf(car.getPrice()));
+
             System.out.println(car);
             valami(car);
+
 
 
         }catch (Exception e){
@@ -109,6 +110,7 @@ public class bprDealershipCarDeatailsScreenController  implements Initializable 
             itemController.setData(car);
             System.out.println("valami");
             carGrid.add(box, 1, 1);
+            bill.setText(String.valueOf(car.getPrice()));
 
         }catch (IOException e) {
             e.printStackTrace();
